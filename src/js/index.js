@@ -40,7 +40,45 @@ function expect(target) {
 // â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“
 
 
-//              YOUR CODE GOES HERE AND ONLY HERE
+
+class Dog {
+  constructor(dogParams) {
+    // console.log(dogParams);
+    dogParams = dogParams || {};
+    this.color = dogParams.color;
+    this.hungry = dogParams.hungry;
+    this.owner = undefined;
+    this.status = 'normal';
+
+      if(dogParams.hungry===undefined) { 
+      this.hungry=true; 
+    }
+  }  
+}
+
+
+class Human {
+  constructor(humanParams) {
+    // console.log('new animal created');
+    humanParams = humanParams || {};
+    this.cool = humanParams.cool;
+
+    if (humanParams.cool===undefined) {
+      this.cool=false;
+    }
+  }
+
+  pet(dog) {
+    dog.status = 'happy';
+  }
+
+  feed(dog) {
+    dog.hungry = false;
+  }
+}
+
+
+
 
 
 // â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘
